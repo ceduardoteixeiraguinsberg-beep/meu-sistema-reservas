@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Jornada Espacial - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jornada Espacial</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planetas">Planetas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Explorando o Sistema Solar</h1>
+        
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Missão Iniciada!</strong> Sua jornada pelo sistema solar foi configurada com sucesso. [cite: 132]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <div class="p-5 mb-4 bg-info rounded-3 text-white shadow">
+            <div class="container-fluid py-2">
+                <p class="fs-4">Bem-vindo ao meu diário de bordo! O espaço é a última fronteira e aqui documento os planetas que pretendo visitar.</p>
+                <a href="https://www.nasa.gov" target="_blank" class="btn btn-light btn-lg">Visitar NASA</a>
+            </div>
+        </div>
+
+        <div class="row text-center" id="planetas">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=500" class="card-img-top" alt="Marte">
+                    <div class="card-body"> <h5 class="card-title">Marte</h5> <p class="card-text">O Planeta Vermelho. Distância: 225 milhões de km.</p>
+                        <button class="btn btn-primary">Ver Missão</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=500" class="card-img-top" alt="Lua">
+                    <div class="card-body">
+                        <h5 class="card-title">Lua</h5>
+                        <p class="card-text">Nossa vizinha mais próxima. Distância: 384.400 km.</p>
+                        <button class="btn btn-success">Concluída</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=500" class="card-img-top" alt="Júpiter">
+                    <div class="card-body">
+                        <h5 class="card-title">Júpiter</h5>
+                        <p class="card-text">O gigante gasoso e suas diversas luas.</p>
+                        <button class="btn btn-outline-primary">Explorar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5 mb-5" id="contato">
+            <div class="col-md-6 bg-white p-4 rounded shadow-sm border">
+                <h3 class="mb-3">Inscreva-se na Missão</h3>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control is-valid" placeholder="Seu nome" required>
+                        <div class="valid-feedback">Nome preenchido corretamente!</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">E-mail do Astronauta</label>
+                        <input type="email" class="form-control is-invalid" placeholder="email@nasa.gov" required>
+                        <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+                    </div>
+                    <button type="submit" class="btn btn-danger w-100">Enviar Candidatura</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

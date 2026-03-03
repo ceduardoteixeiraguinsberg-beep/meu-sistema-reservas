@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card p-4 shadow-sm" style="max-width: 400px; margin: auto;">
+    <h3>Editar Utilizador</h3>
+    <form method="POST">
+        <div class="mb-3">
+            <label>Nome:</label>
+            <input type="text" name="username" value="{{ usuario.username }}" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label>Email:</label>
+            <input type="email" name="email" value="{{ usuario.email }}" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Guardar Alterações</button>
+        <a href="{{ url_for('list_users') }}" class="btn btn-link w-100">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

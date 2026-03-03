@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
+        <h3>Editar Reserva #{{ reserva.id }}</h3>
+        <form method="POST">
+            <div class="mb-3">
+                <label>Serviço:</label>
+                <input type="text" name="servico" class="form-control" value="{{ reserva.servico }}" required>
+            </div>
+            <div class="mb-3">
+                <label>Data:</label>
+                <input type="datetime-local" name="data" class="form-control" value="{{ reserva.data }}" required>
+            </div>
+            <button type="submit" class="btn btn-warning w-100">Atualizar Reserva</button>
+            <a href="/reservas" class="btn btn-link w-100 mt-2">Cancelar</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

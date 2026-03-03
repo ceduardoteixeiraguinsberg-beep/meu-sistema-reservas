@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Jornada Espacial - Flexbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0fdfa;
+        }
+
+        header {
+            background-color: #40E0D0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            padding: 40px 5%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border: 2px solid #40E0D0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        th {
+            background-color: #40E0D0;
+            color: white;
+            padding: 10px;
+        }
+
+        td {
+            border: 1px solid #40E0D0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #40E0D0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">  Explore os Astros</div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="https://www.nasa.gov" target="_blank">NASA</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Explorando o Sistema Solar</h1>
+            <p>Bem-vindo ao meu diário de bordo! O espaço é a última fronteira.</p>
+            <br>
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" alt="Terra">
+        </section>
+
+        <section class="card-container">
+            <div class="card">
+                <h3>Marte</h3>
+                <p>O Planeta Vermelho</p>
+            </div>
+            <div class="card">
+                <h3>Saturno</h3>
+                <p>Seus anéis incríveis</p>
+            </div>
+            <div class="card">
+                <h3>Júpiter</h3>
+                <p>O gigante gasoso</p>
+            </div>
+        </section>
+
+        <section style="margin-top: 40px;">
+            <h3>Dados de Viagem:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Distância</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marte</td>
+                        <td>225 milhões de km</td>
+                        <td>Em planejamento</td>
+                    </tr>
+                    <tr>
+                        <td>Lua</td>
+                        <td>384.400 km</td>
+                        <td>Concluída</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jornada Espacial - Criado com Flexbox</p>
+    </footer>
+
+</body>
+</html>

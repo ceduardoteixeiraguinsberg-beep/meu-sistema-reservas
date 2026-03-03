@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre - Projeto Flask{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-5">
+                <h1 class="display-5 text-primary mb-4">
+                    <i class="bi bi-info-circle"></i> Sobre o Projeto
+                </h1>
+
+                <p class="lead">
+                    Este sistema evoluiu de uma simples página na Aula 15 para uma plataforma completa de 
+                    <strong>Gestão de Recursos</strong> na Aula 26.
+                </p>
+
+                <hr class="my-4">
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h4><i class="bi bi-layers"></i> Arquitetura MVC</h4>
+                        <p>
+                            A aplicação utiliza a estrutura profissional <strong>Model-View-Controller</strong>, 
+                            garantindo que a base de dados (Model), a lógica (Controller) e a interface (View) 
+                            trabalhem em harmonia.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><i class="bi bi-database-check"></i> Tecnologias</h4>
+                        <ul class="list-unstyled">
+                            <li><i class="bi bi-check2-circle text-success"></i> Python & Flask</li>
+                            <li><i class="bi bi-check2-circle text-success"></i> SQLite3 (Relacional)</li>
+                            <li><i class="bi bi-check2-circle text-success"></i> Bootstrap 5 & CSS3</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+                <div class="alert alert-info mt-4">
+                    <strong>Marcos do Projeto:</strong> Iniciado na Aula 15 com rotas básicas, 
+                    implementação de login na Aula 20, e gestão avançada de recursos com chaves 
+                    estrangeiras na Aula 26.
+                </div>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-4">
+                    <a href="{{ url_for('home') }}" class="btn btn-outline-secondary px-4 me-md-2">
+                        <i class="bi bi-arrow-left"></i> Voltar ao Início
+                    </a>
+                    <a href="{{ url_for('contactos') }}" class="btn btn-primary px-4">
+                        <i class="bi bi-envelope"></i> Contactar Suporte
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

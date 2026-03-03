@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Relatório: {{ recurso.nome }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Início</a></li>
+        <li class="breadcrumb-item"><a href="{{ url_for('relatorios_dashboard') }}">Relatórios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ recurso.nome }}</li>
+      </ol>
+    </nav>
+
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Relatório de Utilização: <span class="text-primary">{{ recurso.nome }}</span></h2>
+            <p class="text-muted">Análise detalhada de todas as marcações efetuadas para este recurso.</p>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm bg-info text-white">
+                <div class="card-body text-center">
+                    <h6 class="text-uppercase small fw-bold">Total de Reservas</h6>
+                    <h2 class="display-5 fw-bold mb-0">{{ total }}</h2>
+                    <i class="bi bi-graph-up-arrow fs-1 opacity-25" style="position: absolute; right: 10px; bottom: 5px;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4">Utilizador</th>
+                            <th>Data e Hora da Reserva</th>
+                            <th>Serviço/Motivo</th>
+                            <th class="text-end pe-4">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for r in reservas %}
+                        <tr>
+                            <td class="ps-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center me-2" style="width: 32px; height: 32px; font-size: 0.8rem;">
+                                        {{ r.username[0] | upper }}
+                                    </div>
+                                    <strong>{{ r.username }}</strong>
+                                </div>
+                            </td>
+                            <td><i class="bi bi-clock me-2 text-muted"></i>{{ r.data }}</td>
+                            <td>{{ r.servico if r.servico else 'Não especificado' }}</td>
+                            <td class="text-end pe-4">
+                                <span class="badge rounded-pill bg-success-subtle text-success border border-success-subtle">Realizada</span>
+                            </td>
+                        </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="4" class="text-center py-5">
+                                <i class="bi bi-calendar-x fs-1 text-muted d-block mb-2"></i>
+                                <p class="text-muted">Ainda não existem reservas registadas para este recurso.</p>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <button onclick="window.print()" class="btn btn-dark shadow-sm">
+            <i class="bi bi-printer"></i> Imprimir Relatório
+        </button>
+    </div>
+</div>
+{% endblock %}

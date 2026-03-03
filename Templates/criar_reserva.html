@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header text-white" style="background-color: #20c997;">
+                    <h3 class="mb-0">Agendar Novo Recurso</h3>
+                </div>
+                <div class="card-body">
+                    {% if erro %}<div class="alert alert-danger text-center">{{ erro }}</div>{% endif %}
+
+                    <form method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Selecionar Recurso:</label>
+                            <select name="recurso_id" class="form-select" required>
+                                <option value="">-- Escolha um Recurso da Lista --</option>
+                                {% for r in recursos %}
+                                    <option value="{{ r.id }}">{{ r.nome }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Data e Hora:</label>
+                            <input type="datetime-local" name="data" class="form-control" required>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn text-white" style="background-color: #20c997;">Confirmar Agendamento</button>
+                            <a href="{{ url_for('listar_reservas') }}" class="btn btn-outline-secondary">Voltar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

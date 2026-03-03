@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard Privado{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold text-primary">Painel de Controlo</h1>
+        <p class="col-md-8 fs-4">Bem-vindo à área administrativa, <strong>{{ session['user'] }}</strong>. Esta página está protegida</p>
+        <hr>
+        <p>Aqui podes ver dados sensíveis que utilizadores anónimos não podem ver.</p>
+    </div>
+</div>
+{% endblock %}
