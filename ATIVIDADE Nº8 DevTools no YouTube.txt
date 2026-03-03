@@ -1,0 +1,10 @@
+ATIVIDADE Nº8 DevTools no YouTube   
+
+Mexendo na estrutura (Painel Elementos): Usei a ferramenta de inspeção para entender como o YouTube é montado. Consegui mudar alguns textos da página e troquei as cores de uns botões no painel de Estilos só para ver como ficava em tempo real.
+
+Vendo como fica no telemóvel (Design Responsivo): Usei o modo de simulação de aparelhos para ver o site "encolher". É muito interessante ver como o YouTube reorganiza os vídeos e o menu quando a tela fica do tamanho de um telemóvel ou de um tablet.
+
+Visualizando  os bastidores (Rede): Abri a aba de Rede e atualizei a página. Vi uma lista enorme de coisas que o navegador precisa carregar, como as imagens dos vídeos e os códigos, e quanto tempo cada coisa demora para aparecer.
+
+Verificando os  erros (Consola): Olhei o "diário" do navegador para ver se o site tinha algum problema. Encontrei algumas mensagens de erro em vermelho, que mostram quando alguma parte do código não funcionou como devia.
+
